@@ -1,0 +1,973 @@
+{
+    "ChatStartTopic": {
+        "prompt": ["I can help you with questions on the following topics:"],
+            "prompt_ssml": ["I can help you with questions on the following topics:"],
+                "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                    "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                        "option": [
+                            "1. Help logging in.",
+                            "2. Questions about my payment plan.",
+                            "3. How to contact {{servicer}}.",
+                            "4. Help with something else."
+                        ]
+    },
+    "Flow2": {
+        "prompt": ["I can help you with questions on the following topics:"],
+            "prompt_ssml": ["I can help you with questions on the following topics:"],
+                "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                    "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                        "option": [
+                            "1. Help logging in.",
+                            "2. Questions about my payment plan.",
+                            "3. How to contact {{servicer}}.",
+                            "4. Help with something else."
+                        ]
+    },
+    "Flow3": {
+        "Flow3_1": {
+            "prompt": ["Help logging in. Got it. It's possible that either the username or password were entered incorrectly."],
+                "prompt_ssml": ["Help logging in. Got it. It's possible that either the username or password were entered incorrectly."]
+        },
+        "Flow3_2": {
+            "prompt": ["Check to make sure that your Caps Lock isn't turned on as passwords are case-sensitive. Then let me know."],
+                "prompt_ssml": ["Check to make sure that your Caps Lock isn't turned on as passwords are case-sensitive. Then let me know."]
+        },
+        "Flow3_3": {
+            "prompt": ["Were you able to log in?"],
+                "prompt_ssml": ["Were you able to log in?"],
+                    "option": [
+                        "1. Yes.",
+                        "2. No."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "reprompt": ["Sorry. I didn't quite catch that. Please text \"yes\" or \"no\"."],
+            "reprompt_ssml": ["Sorry. I didn't quite catch that. Please text \"yes\" or \"no\"."]
+    },
+    "Flow4": {
+        "prompt": ["Great! Is there anything else I can help you with?"],
+            "prompt_ssml": ["Great! Is there anything else I can help you with?"],
+                "option": [
+                    "1. Yes, return to help topics.",
+                    "2. No, end chat."
+                ],
+                    "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                        "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+
+    },
+    "Flow5": {
+        "prompt": ["OK - what is the issue?"],
+            "prompt_ssml": ["OK - what is the issue?"],
+                "option": [
+                    "1. I don't know my username or password.",
+                    "2. My account is locked.",
+                    "3. I don't have a current plan.",
+                    "4. Other logging-in problems."
+                ],
+                    "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                        "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+
+                            "Flow5_ForgotUP": {
+            "Flow5_ForgotUP_1": {
+                "prompt": ["OK. Follow the link below and enter the username or email address that you used when you created your account."],
+                    "prompt_ssml": ["OK. Follow the link below and enter the username or email address that you used when you created your account."]
+            },
+            "Flow5_ForgotUP_2": {
+                "prompt": ["If you enter a valid email address or username, you will receive an email with a six-digit code."],
+                    "prompt_ssml": ["If you enter a valid email address or username, you will receive an email with a six-digit code."],
+                        "option": [
+                            "1. Click [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f) to recover your account."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        },
+        "Flow5_Locked": {
+            "Flow5_Locked_1": {
+                "prompt": ["OK. Follow the link below and enter the username or email address that you used when you created your account."],
+                    "prompt_ssml": ["OK. Follow the link below and enter the username or email address that you used when you created your account."]
+            },
+            "Flow5_Locked_2": {
+                "prompt": ["If you enter a valid email address or username, you will receive an email with a six-digit code."],
+                    "prompt_ssml": ["If you enter a valid email address or username, you will receive an email with a six-digit code."],
+                        "option": [
+                            "1. Click [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f) to recover your account."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        },
+        "Flow5_UP_Code": {
+            "prompt": ["Did you receive the email from {{servicer}} containing the six-digit code?"],
+                "prompt_ssml": ["Did you receive the email from {{servicer}} containing the six-digit code?"],
+                    "option": [
+                        "1. Yes.",
+                        "2. Yes, but it says my email is not associated with a valid account.",
+                        "3. No."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "Flow5_UP_Code_Yes": {
+                "prompt": ["Were you able to log-in to your account?"],
+                    "prompt_ssml": ["Were you able to log-into your account?"],
+                        "option": [
+                            "1. Yes.",
+                            "2. No."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        },
+        "Flow5_UP_End": {
+            "prompt": ["Great! Is there anything else I can help you with?"],
+                "prompt_ssml": ["Great! Is there anything else I can help you with?"],
+                    "option": [
+                        "1. Yes, return to help topics.",
+                        "2. No, end chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "Flow5_Locked_Code": {
+            "prompt": ["Did you receive the email from {{servicer}} containing the six-digit code?"],
+                "prompt_ssml": ["Did you receive the email from {{servicer}} containing the six-digit code?"],
+                    "option": [
+                        "1. Yes.",
+                        "2. Yes, but it says my email is not associated with a valid account.",
+                        "3. No."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "Flow5_Locked_Code_Yes": {
+                "prompt": ["Were you able to log-in to your account?"],
+                    "prompt_ssml": ["Were you able to log-in to your account?"],
+                        "option": [
+                            "1. Yes",
+                            "2. No."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        },
+        "Flow5_Locked_End": {
+            "prompt": ["Great! Is there anything else I can help you with?"],
+                "prompt_ssml": ["Great! Is there anything else I can help you with?"],
+                    "option": [
+                        "1. Yes, return to help topics.",
+                        "2. No, end chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow6": {
+        "prompt": ["You may have used a different email address when you initially set up your {{servicer}} account. Would you like to try a different email?"],
+            "prompt_ssml": ["You may have used a different email address when you initially set up your {{servicer}} account. Would you like to try a different email?"],
+                "option": [
+                    "1. Yes, [try again.](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f)",
+                    "2. No, return to help topics.",
+                    "3. No, end chat."
+                ],
+                    "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                        "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+
+                            "Flow6_Yes": {
+            "prompt": ["Were you able to log-in to your account?"],
+                "prompt_ssml": ["Were you able to log-in to your account?"],
+                    "option": [
+                        "1. Yes.",
+                        "2. No."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+
+    },
+    "Flow7": {
+        "Flow7_1": {
+            "prompt": ["If you entered your username and didn't receive an email, it's possible that the username you entered is incorrect. You may wish to try again using the email address you used when you created your account."],
+                "prompt_ssml": ["If you entered your username and didn't receive an email, it's possible that the username you entered is incorrect. You may wish to try again using the email address you used when you created your account."]
+        },
+        "Flow7_2": {
+            "prompt": ["It's possible the {{servicer}} email was blocked by your email SPAM filter."],
+                "prompt_ssml": ["It's possible the {{servicer}} email was blocked by your email SPAM filter."]
+        },
+        "Flow7_3": {
+            "prompt": ["Check your SPAM and Junk email folders for an email from {{servicer}} Campus Commerce. with a subject line of \"{{servicer}} Recover Account Request\". Then select an option below:"],
+                "prompt_ssml": ["Check your SPAM and Junk email folders for an email from {{servicer}} Campus Commerce. with a subject line of \"{{servicer}} Recover Account Request\". Then select an option below:"],
+                    "option": [
+                        "1. Try to [recover my account](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f) using a different username or email.",
+                        "2. Return to help topics.",
+                        "3. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "Flow7_4_RecoverAccount": {
+                "prompt": ["Were you able to log-in to your account this time?"],
+                    "prompt_ssml": ["Were you able to log-in to your account this time?"],
+                        "option": [
+                            "1. Yes.",
+                            "2. No.",
+                            "3. Now my account is locked."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        }
+    },
+    "Flow8": {
+        "Flow8_1": {
+            "prompt": ["Accounts can be locked due to reaching the maximum number of attempts with incorrect information, or due to inactivity."],
+                "prompt_ssml": ["Accounts can be locked due to reaching the maximum number of attempts with incorrect information, or due to inactivity."]
+        },
+        "Flow8_2": {
+            "prompt": ["You can unlock your account by clicking  [here.](https://login.nelnet.net/recover/request?companyname=NBS&InstKey=) After unlocking your account, select from below:"],
+                "prompt_ssml": ["You can unlock your account by clicking [here.](https://login.nelnet.net/recover/request?companyname=NBS&InstKey=) After unlocking your account, select from below:"],
+                    "option": [
+                        "1. Return to help topics.",
+                        "2. Contact {{servicer}}.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow9": {
+        "prompt": ["OK. You might have a browser related issue."],
+            "prompt_ssml": ["OK. You might have a browser related issue."],
+                "option": [
+                    "1. Check my browser.",
+                    "2. Return to help topics.",
+                    "3. End chat."
+                ],
+                    "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                        "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "Flow9_1": {
+            "prompt": ["Ok. Do you have an existing plan?"],
+                "prompt_ssml": ["Ok. Do you have an existing plan?"],
+                    "option": [
+                        "1. Yes.",
+                        "2. No, I'd like to set up a payment plan."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow10": {
+        "Flow10_1": {
+            "prompt": ["Great! First you will need to log-in to your account using your username and password."],
+                "prompt_ssml": ["Great! First you will need to log-in to your account using your username and password."]
+        },
+        "Flow10_2": {
+            "prompt": ["What can I assist you with today?"],
+                "prompt_ssml": ["What can I assist you with today?"],
+                    "option": [
+                        "1. How much/when is my next payment?",
+                        "2. Can I change my due date?",
+                        "3. Make a payment or check the status of a payment.",
+                        "4. Update my financial information.",
+                        "5. Remove my financial information.",
+                        "6. Terminate payment plan.",
+                        "7. Fees questions.",
+                        "8. Add/edit/remove an authorized party.",
+                        "9. Adjust my payment plan balance."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "Flow10_NextPay": {
+            "Flow10_NextPay_1": {
+                "prompt": ["Log in [here](https://login.nelnet.net/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630074195592462.bdfb2901b196466bbfff6fb716f2d6cd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D9ec84ac2-9e85-4566-addc-5f7b680bbe67), if you haven't already, and navigate on our website to the screen shown below. (Our chat will stay open on this tab.)"],
+                    "prompt_ssml": ["Log in [here](https://login.nelnet.net/login?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630074195592462.bdfb2901b196466bbfff6fb716f2d6cd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D9ec84ac2-9e85-4566-addc-5f7b680bbe67), if you haven't already, and navigate on our website to the screen shown below. (Our chat will stay open on this tab.)"]
+            },
+            "Flow10_NextPay_2": {
+                "prompt": ["You can see the due date and amount of your next payment by clicking on the \"View Details\" link, located next to the Payment Plan & Billing Box."],
+                    "prompt_ssml": ["You can see the due date and amount of your next payment by clicking on the \"View Details\" link, located next to the Payment Plan and Billing Box."]
+            },
+            "Flow10_NextPay_3": {
+                "prompt": ["Under the \"Upcoming Payments\" section you will be able to see all scheduled payments remaining on your plan."],
+                    "prompt_ssml": ["Under the Upcoming Payments section you will be able to see all scheduled payments remaining on your plan."]
+            },
+            "Flow10_NextPay_4": {
+                "prompt": ["What else can I help you with?"],
+                    "prompt_ssml": ["What else can I help you with?"],
+                        "option": [
+                            "1. More payment plan topics.",
+                            "2. Back to help topics.",
+                            "3. I'm all set. End chat."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        }
+    },
+    "Flow10_CP": {
+        "Flow10_CP_1": {
+            "prompt": ["The method for signing up for a payment plan varies from school to school. You can check your school's website for information related to their payment plan options."],
+                "prompt_ssml": ["The method for signing up for a payment plan varies from school to school. You can check your school's website for information related to their payment plan options."]
+        },
+        "Flow10_CP_2": {
+            "prompt": ["You can also speak with a {{servicer}} Campus Commerce agent for specific details on your school's payment plan options."],
+                "prompt_ssml": ["You can also speak with a {{servicer}} Campus Commerce agent for specific details on your school's payment plan options."],
+                    "option": [
+                        "1. Contact {{servicer}}.",
+                        "2. Return to help topics.",
+                        "3. End Chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow10_1_1": {
+        "Flow10_1_1_1": {
+            "prompt": ["The method for signing up for a payment plan varies from school to school. You can go to [MyCollegePaymentPlan.com](https://mycollegepaymentplan.com/) and search for your school for instructions to sign up for a plan. Your chat will remain open on this tab."],
+                "prompt_ssml": ["The method for signing up for a payment plan varies from school to school. You can go to [MyCollegePaymentPlan.com](https://mycollegepaymentplan.com/) and search for your school for instructions to sign up for a plan. Your chat will remain open on this tab."]
+        },
+        "Flow10_1_1_2": {
+            "prompt": ["You can also speak with a {{servicer}} Campus Commerce agent for specific details on your schools payment plan options."],
+                "prompt_ssml": ["You can also speak with a {{servicer}} Campus Commerce agent for specific details on your schools payment plan options."],
+                    "option": [
+                        "1. Contact {{servicer}} Campus Commerce.",
+                        "2. Return to help topics.",
+                        "3. End Chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow10_1_2": {
+        "prompt": ["Select from the list below:"],
+            "prompt_ssml": ["Select from the list below:"],
+                "option": [
+                    "1. How much/when is my next payment?",
+                    "2. Can I change my due date?",
+                    "3. Make a payment or check the status of a payment.",
+                    "4. Update my financial information.",
+                    "5. Remove my financial information.",
+                    "6. Terminate payment plan.",
+                    "7. Fees questions.",
+                    "8. Add/edit/remove an authorized party.",
+                    "9. Adjust my payment plan balance."
+                ],
+                    "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                        "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+    },
+    "Flow11": {
+        "Flow11_Auto": {
+            "Flow11_Auto_1": {
+                "prompt": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the Activity Details page shown below. (Our chat will stay open on this tab.) \n\n Then click the \"Schedule\" option"],
+                    "prompt_ssml": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the Activity Details page shown below. (Our chat will stay open on this tab.) \n\n Then click the \"Schedule\" option"]
+            },
+            "Flow11_Auto_2": {
+                "Flow11_Auto_2_1": {
+                    "prompt": ["If \"Change Payment Date\" appears, as on the screen above, click that link to select your new payment date.A calendar like this one will open."],
+                        "prompt_ssml": ["If \"Change Payment Date\" appears, as on the screen above, click that link to select your new payment date.A calendar like this one will open."]
+                },
+                "Flow11_Auto_2_2": {
+                    "prompt": ["Select the date you would like your payments made and click the \"Change\" button at the bottom of the calendar."],
+                        "prompt_ssml": ["Select the date you would like your payments made and click the \"Change\" button at the bottom of the calendar."]
+                },
+                "Flow11_Auto_2_3": {
+                    "prompt": ["Click the cancel button if you do not wish to change the payment due date."],
+                        "prompt_ssml": ["Click the cancel button if you do not wish to change the payment due date."]
+                }
+            },
+            "Flow11_Auto_3": {
+                "prompt": ["If there is no link saying, \"Change Payment Date\", as shown below, then payment date changes are not permitted."],
+                    "prompt_ssml": ["If there is no link saying, \"Change Payment Date\", as shown below, then payment date changes are not permitted."]
+            }
+        },
+        "Flow11_ExitBlock": {
+            "prompt": ["What else can I help you with?"],
+                "prompt_ssml": ["What else can I help you with?"],
+                    "option": [
+                        "1. More payment plan topics.",
+                        "2. Back to help topics.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow13": {
+        "Flow13_1": {
+            "prompt": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the Payment Plan & Billing page shown below. (Our chat will stay open on this tab.) \n From your home page, click the \"Make a Payment\" button."],
+                "prompt_ssml": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the Payment Plan and Billing page shown below. (Our chat will stay open on this tab.) \n From your home page, click the \"Make a Payment\" button."]
+        },
+        "Flow13_2": {
+            "prompt": ["On the page like the one below, select the term you would like to pay. if it's different from the defaulted term selected."],
+                "prompt_ssml": ["On the page like the one below, select the term you would like to pay. if it's different from the defaulted term selected."]
+        },
+        "Flow13_3": {
+            "Flow13_3_1": {
+                "prompt": ["Changes to ACH payments must be submitted at least two business days prior to the payment due date."],
+                    "prompt_ssml": ["Changes to ACH payments must be submitted at least two business days prior to the payment due date."]
+            },
+            "Flow13_3_2": {
+                "prompt": ["You can select a specific payment to make, pay the balance in full, or pay another amount. Just click the correct radio button to indicate your choice."],
+                    "prompt_ssml": ["You can select a specific payment to make, pay the balance in full, or pay another amount. Just click the correct radio button to indicate your choice."]
+            },
+            "Flow13_3_3": {
+                "prompt": ["After selecting a radio button, click the button labeled  \"Next - Payment Method\" to select the account you want the payment to be drawn from."],
+                    "prompt_ssml": ["After selecting a radio button, click the button labeled  \"Next - Payment Method\" to select the account you want the payment to be drawn from."]
+            }
+        },
+        "Flow13_4": {
+            "prompt": ["If you have any payments in process, they will be displayed in our website."],
+                "prompt_ssml": ["If you have any payments in process, they will be displayed in our website."]
+        },
+        "Flow13_5": {
+            "Flow13_5_1": {
+                "prompt": ["You cannot stop or make any changes to payments that are currently in process."],
+                    "prompt_ssml": ["You cannot stop or make any changes to payments that are currently in process."]
+            },
+            "Flow13_5_2": {
+                "prompt": ["On the page below, select your preferred current payment method."],
+                    "prompt_ssml": ["On the page below, select your preferred current payment method."]
+            },
+            "Flow13_5_4": {
+                "prompt": ["Please Note: Any applicable fees for paying with a credit or debit card or a bank account will be outlined in the box to the right of the Payment Method selected."],
+                    "prompt_ssml": ["Please Note: Any applicable fees for paying with a credit or debit card or a bank account will be outlined in the box to the right of the Payment Method selected."]
+            },
+            "Flow13_5_5": {
+                "prompt": ["If adding new banking, click Save & Continue."],
+                    "prompt_ssml": ["If adding new banking, click Save and Continue."]
+            }
+        },
+        "Flow13_6": {
+            "Flow13_6_1": {
+                "prompt": ["Carefully review the payment details page and ensure that the total amount being paid is correct, and that the correct bank account has been selected. Click the Pay Now button at the bottom of the screen."],
+                    "prompt_ssml": ["Carefully review the payment details page and ensure that the total amount being paid is correct, and that the correct bank account has been selected. Click the Pay Now button at the bottom of the screen."]
+            },
+            "Flow13_6_2": {
+                "prompt": ["What else can I help you with?"],
+                    "prompt_ssml": ["What else can I help you with?"],
+                        "option": [
+                            "1. More payment plan topics.",
+                            "2. Back to help topics.",
+                            "3. I'm all set. End chat."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        }
+    },
+    "Flow14": {
+        "Flow14_1": {
+            "prompt": ["To update your financial information: After Logging In, click the button labeled  \"Actions \" and then select \"Change Financial Account\"."],
+                "prompt_ssml": ["To update your financial information: After Logging In, click the button labeled \"Actions \" and then select \"Change Financial Account\"."]
+        },
+        "Flow14_2": {
+            "Flow14_2_1": {
+                "prompt": ["Any saved accounts will show up on a screen like the one below."],
+                    "prompt_ssml": ["Any saved accounts will show up on a screen like the one below."]
+            },
+            "Flow14_2_2": {
+                "prompt": ["You could have more than one account saved if you have additional services."],
+                    "prompt_ssml": ["You could have more than one account saved if you have additional services."]
+            },
+            "Flow14_2_3": {
+                "prompt": ["Change the account for the service you wish to update. Click the Change Account button for that service."],
+                    "prompt_ssml": ["Change the account for the service you wish to update. Click the Change Account button for that service."]
+            },
+            "Flow14_2_4": {
+                "prompt": ["Enter the new banking information and click save."],
+                    "prompt_ssml": ["Enter the new banking information and click save."]
+            }
+        },
+        "Flow14_ExitBlock": {
+            "prompt": ["What else can I help you with?"],
+                "prompt_ssml": ["What else can I help you with?"],
+                    "option": [
+                        "1. More payment plan topics.",
+                        "2. Back to help topics.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow15": {
+        "Flow15_1": {
+            "Flow15_1_1": {
+                "prompt": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the screen shown below. (Our chat will stay open on this tab.)"],
+                    "prompt_ssml": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the screen shown below. (Our chat will stay open on this tab.)"]
+            },
+            "Flow15_1_2": {
+                "prompt": ["Accounts can only be removed if they are not tied to any active payment activities."],
+                    "prompt_ssml": ["Accounts can only be removed if they are not tied to any active payment activities."]
+            },
+            "Flow15_1_3": {
+                "prompt": ["In the banner, click on the Financial Accounts tab. Locate the Financial Account you would like to remove."],
+                    "prompt_ssml": ["In the banner, click on the Financial Accounts tab. Locate the Financial Account you would like to remove."]
+            }
+        },
+        "Flow15_2": {
+            "Flow15_2_1": {
+                "prompt": ["If the account can be removed, it will have a Remove button located next to it."],
+                    "prompt_ssml": ["If the account can be removed, it will have a Remove button located next to it."]
+            },
+            "Flow15_2_2": {
+                "prompt": ["If the account doesn't have a Remove button, the account is tied to current payment activity and cannot be removed."],
+                    "prompt_ssml": ["If the account doesn't have a Remove button, the account is tied to current payment activity and cannot be removed."]
+            },
+            "Flow15_2_3": {
+                "prompt": ["If you want to remove an account that is tied to an active payment activity, you will first need to update the banking for that current payment activity."],
+                    "prompt_ssml": ["If you want to remove an account that is tied to an active payment activity, you will first need to update the banking for that current payment activity."]
+            }
+        },
+        "Flow15_ExitBlock": {
+            "prompt": ["What else can I help you with?"],
+                "prompt_ssml": ["What else can I help you with?"],
+                    "option": [
+                        "1. More payment plan topics.",
+                        "2. Back to help topics.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow16": {
+        "Flow16_1": {
+            "Flow16_1_1": {
+                "prompt": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the screen shown below. (Our chat will stay open on this tab.)"],
+                    "prompt_ssml": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already, and navigate on our website to the screen shown below. (Our chat will stay open on this tab.)"]
+            },
+            "Flow16_1_2": {
+                "prompt": ["Most schools require that requests to terminate a payment plan first go through the school."],
+                    "prompt_ssml": ["Most schools require that requests to terminate a payment plan first go through the school."]
+            },
+            "Flow16_1_3": {
+                "prompt": ["If you can't reach your school, feel free to contact us via phone: \n\n Tuition payment plan: [(800)609-8056](tel:8006098056)"],
+                    "prompt_ssml": ["If you can't reach your school, feel free to contact us via phone: \n\n Tuition payment plan: [(800)609-8056](tel:8006098056)"]
+            }
+        },
+        "Flow16_ExitBlock": {
+            "prompt": ["What else can I help you with?"],
+                "prompt_ssml": ["What else can I help you with?"],
+                    "option": [
+                        "1. More payment plan topics.",
+                        "2. Back to help topics.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow17": {
+        "Flow17_1": {
+            "Flow17_1_1": {
+                "prompt": ["Ok. Questions about fees:"],
+                    "prompt_ssml": ["Ok. Questions about fees:"]
+            },
+            "Flow17_1_2": {
+                "prompt": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already. (Our chat will stay open on this tab.) There are a variety of reasons a fee may be assessed for a payment plan."],
+                    "prompt_ssml": ["Log in [here](https://login.nelnet.net/recover/request?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fclient_id%3DPortal%26response_type%3Did_token%26scope%3Dopenid%2520profile%26redirect_uri%3Dhttps%253A%252F%252Fwww.nbspayments.com%252Fauth%252Fsignincallback%26nonce%3D637630072562205171.aa2a9b293c4849f58eccb52426886bcd%26acr_values%3Dcompanyname%253Anbs%26response_mode%3Dform_post%26logid%3D6ed3f26e-b5e2-4ab1-8394-7d739a014b1f), if you haven't already. (Our chat will stay open on this tab.) There are a variety of reasons a fee may be assessed for a payment plan."]
+            },
+            "Flow17_1_3": {
+                "prompt": ["From your home page, shown below, click View Details."],
+                    "prompt_ssml": ["From your home page, shown below, click View Details."]
+            }
+        },
+        "Flow17_2": {
+            "prompt": ["Then click the \"Transactions\" tab or click the \"Payments\" tab."],
+                "prompt_ssml": ["Then click the \"Transactions\" tab or click the \"Payments\" tab."]
+        },
+        "Flow17_3": {
+            "Flow17_3_1": {
+                "prompt": ["A list of all transactions will display, as you can see below, showing what each transaction is for."],
+                    "prompt_ssml": ["A list of all transactions will display, as you can see below, showing what each transaction is for."]
+            },
+            "Flow17_3_2": {
+                "prompt": ["You can click on the \"Transaction Type,\" as shown above, for additional details related to the transaction or fee."],
+                    "prompt_ssml": ["You can click on the \"Transaction Type\", as shown above, for additional details related to the transaction or fee."]
+            },
+            "Flow17_3_3": {
+                "prompt": ["If you're still unsure of what a fee is for, you can contact {{servicer}} for additional details."],
+                    "prompt_ssml": ["If you're still unsure of what a fee is for, you can contact {{servicer}} for additional details."],
+                        "option": [
+                            "1. Contact {{servicer}}.",
+                            "2. Continue."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        },
+        "Flow17_ExitBlock": {
+            "prompt": ["What else can I help you with?"],
+                "prompt_ssml": ["What else can I help you with?"],
+                    "option": [
+                        "1. More payment plan topics.",
+                        "2. Back to help topics.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow18": {
+        "Flow18_1": {
+            "prompt": ["To add/edit/remove an authorized party: From the home page, click \"Add an Authorized Party\", located in the box with the plan owners name at the top, as shown here:"],
+                "prompt_ssml": ["To add/edit/remove an authorized party: From the home page, click \"Add an Authorized Party\", located in the box with the plan owners name at the top, as shown here:"]
+        },
+        "Flow18_2": {
+            "Flow18_2_1": {
+                "prompt": ["Complete the required information to add an authorized party to your agreement."],
+                    "prompt_ssml": ["Complete the required information to add an authorized party to your agreement."]
+            },
+            "Flow18_2_2": {
+                "prompt": ["You can also edit existing authorized parties. Simply click on \"My Profile\" and view existing AP's under the \"Manage Payers\" section."],
+                    "prompt_ssml": ["You can also edit existing authorized parties. Simply click on \"My Profile\" and view existing AP's under the \"Manage Payers\" section."]
+            }
+        },
+        "Flow18_ExitBlock": {
+            "prompt": ["What else can I help you with?"],
+                "prompt_ssml": ["What else can I help you with?"],
+                    "option": [
+                        "1. More payment plan topics.",
+                        "2. Back to help topics.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow23_PaymentPlan": {
+        "Flow23_PaymentPlan_1": {
+            "prompt": ["You can reach us by:"],
+                "prompt_ssml": ["You can reach us by:"],
+                    "option": [
+                        "1. Email.",
+                        "2. Live chat.",
+                        "3. Phone."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "Flow23_PaymentPlan_2": {
+            "Flow23_PaymentPlan_2_1": {
+                "prompt": ["Email us at: [ecashier@nelnet.net](mailto:ecashier@nelnet.net)"],
+                    "prompt_ssml": ["Email us at: [ecashier@nelnet.net](mailto:ecashier@nelnet.net)"]
+            },
+            "Flow23_PaymentPlan_2_2": {
+                "prompt": ["Emails will be responded within 24 business hours of the email being received."],
+                    "prompt_ssml": ["Emails will be responded within 24 business hours of the email being received."],
+                        "option": [
+                            "1. Live chat.",
+                            "2. Phone.",
+                            "3. Back to help topics.",
+                            "4. I'm all set. End chat."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        }
+    },
+    "Flow23": {
+        "Flow23_1": {
+            "prompt": ["You can reach us by:"],
+                "prompt_ssml": ["You can reach us by:"],
+                    "option": [
+                        "1. Email.",
+                        "2. Live chat.",
+                        "3. Phone."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "Flow23_2": {
+            "Flow23_2_1": {
+                "prompt": ["Email us at: [ecashier@nelnet.net](mailto:ecashier@nelnet.net)"],
+                    "prompt_ssml": ["Email us at: [ecashier@nelnet.net](mailto:ecashier@nelnet.net)"]
+            },
+            "Flow23_2_2": {
+                "prompt": ["Emails will be responded within 24 business hours of the email being received."],
+                    "prompt_ssml": ["Emails will be responded within 24 business hours of the email being received."],
+                        "option": [
+                            "1. Live chat.",
+                            "2. Phone.",
+                            "3. Back to help topics.",
+                            "4. I'm all set. End chat."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        }
+    },
+    "Flow24_PaymentPlan": {
+        "Flow24_PaymentPlan_1": {
+            "prompt": ["You must be logged into your {{servicer}} account to have access to the live chat option."],
+                "prompt_ssml": ["You must be logged into your {{servicer}} account to have access to the live chat option."]
+        },
+        "Flow24_PaymentPlan_2": {
+            "prompt": ["Live chat is available: Monday to Friday 8:00 AM to 5:00 PM CST."],
+                "prompt_ssml": ["Live chat is available: Monday to Friday 8:00 AM to 5:00 PM CST."]
+        },
+        "Flow24_PaymentPlan_3": {
+            "prompt": ["Once logged in, the live chat option is located in the upper right hand corner of your screen."],
+                "prompt_ssml": ["Once logged in, the live chat option is located in the upper right hand corner of your screen."],
+                    "option": [
+                        "1. Email.",
+                        "2. Phone.",
+                        "3. Back to help topics.",
+                        "4. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow24": {
+        "Flow24_1": {
+            "prompt": ["You must be logged into your {{servicer}} account to have access to the live chat option."],
+                "prompt_ssml": ["You must be logged into your {{servicer}} account to have access to the live chat option."]
+        },
+        "Flow24_2": {
+            "prompt": ["Live chat is available: Monday to Friday 8:00 AM to 5:00 PM CST."],
+                "prompt_ssml": ["Live chat is available: Monday to Friday 8:00 AM to 5:00 PM CST."]
+        },
+        "Flow24_3": {
+            "prompt": ["Once logged in, the live chat option is located in the upper right hand corner of your screen."],
+                "prompt_ssml": ["Once logged in, the live chat option is located in the upper right hand corner of your screen."],
+                    "option": [
+                        "1. Email.",
+                        "2. Phone.",
+                        "3. Back to help topics.",
+                        "4. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow25_PaymentPlan": {
+        "Flow25_PaymentPlan_1": {
+            "prompt": ["You can call us at: [(800)609-8056](tel:8006098056)"],
+                "prompt_ssml": ["You can call us at: [(800)609-8056](tel:8006098056)"]
+        },
+        "Flow25_PaymentPlan_2": {
+            "prompt": ["Agents are available: Monday to Friday  7:00 AM to 9:00 PM and Saturday 8:00 AM to 2:00 PM CST."],
+                "prompt_ssml": ["Agents are available: Monday to Friday  7:00 AM to 9:00 PM and Saturday 8:00 AM to 2:00 PM CST."],
+                    "option": [
+                        "1. Email.",
+                        "2. Live chat.",
+                        "3. Back to help topics.",
+                        "4. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow25": {
+        "Flow25_1": {
+            "prompt": ["You can call us at: [(800)609-8056](tel:8006098056)"],
+                "prompt_ssml": ["You can call us at: [(800)609-8056](tel:8006098056)"]
+        },
+        "Flow25_2": {
+            "prompt": ["Agents are available: Monday to Friday  7:00 AM to 9:00 PM and Saturday 8:00 AM to 2:00 PM CST."],
+                "prompt_ssml": ["Agents are available: Monday to Friday  7:00 AM to 9:00 PM and Saturday 8:00 AM to 2:00 PM CST."],
+                    "option": [
+                        "1. Email.",
+                        "2. Live chat.",
+                        "3. Back to help topics.",
+                        "4. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow26": {
+        "Flow26_1": {
+            "prompt": ["Are you getting an error message when you try to log in? It could be an issue with the browser you are using."],
+                "prompt_ssml": ["Are you getting an error message when you try to log in? It could be an issue with the browser you are using."]
+        },
+        "Flow26_2": {
+            "prompt": ["Download browser troubleshooting for these browsers:"],
+                "prompt_ssml": ["Download browser troubleshooting for these browsers:"]
+        },
+        "Flow26_3": {
+            "prompt": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Google_Chrome_Troubleshooting.pdf) for Google Chrome guide."],
+                "prompt_ssml": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Google_Chrome_Troubleshooting.pdf) for Google Chrome guide."]
+        },
+        "Flow26_4": {
+            "prompt": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Microsoft_Edge_Troubleshooting.pdf) for Microsoft Edge guide."],
+                "prompt_ssml": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Microsoft_Edge_Troubleshooting.pdf) for Microsoft Edge guide."]
+        },
+        "Flow26_5": {
+            "prompt": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Mozilla_Firefox_Troubleshooting.pdf) for Mozilla Firefox guide."],
+                "prompt_ssml": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Mozilla_Firefox_Troubleshooting.pdf) for Mozilla Firefox guide."]
+        },
+        "Flow26_6": {
+            "prompt": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Safari_Troubleshooting.pdf) for Safari guide."],
+                "prompt_ssml": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Safari_Troubleshooting.pdf) for Safari guide."]
+        },
+        "Flow26_7": {
+            "prompt": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Internet_Explorer_Troubleshooting.pdf) for Internet Explorer guide."],
+                "prompt_ssml": ["Click [here](https://factsscreengrabs.blob.core.windows.net/browserguides/Internet_Explorer_Troubleshooting.pdf) for Internet Explorer guide."]
+        },
+        "Flow26_8": {
+            "prompt": ["I hope this was helpful!"],
+                "prompt_ssml": ["I hope this was helpful!"],
+                    "option": [
+                        "1. Return to help topics.",
+                        "2. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow31": {
+        "Flow31_1": {
+            "prompt": ["My services are currently limited to the questions presented previously. However, I am learning all the time. Please feel free to tell me about additional questions you may have. {{servicer}} will periodically update the questions I can answer, as we learn how to best serve you, our valued customer."],
+                "prompt_ssml": ["My services are currently limited to the questions presented previously. However, I am learning all the time. Please feel free to tell me about additional questions you may have. {{servicer}} will periodically update the questions I can answer, as we learn how to best serve you, our valued customer."]
+        },
+        "Flow31_2": {
+            "prompt": ["All comments will be reviewed. However, if you need immediate service, it is best to reach out to one of our team members to assist you in a timely fashion."],
+                "prompt_ssml": ["All comments will be reviewed. However, if you need immediate service, it is best to reach out to one of our team members to assist you in a timely fashion."],
+                    "option": [
+                        "1. Contact {{servicer}} Campus Commerce.",
+                        "2. Send comments and end chat.",
+                        "3. Return to help topics."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "Flow31_3": {
+            "prompt": ["Enter comments here:"],
+                "prompt_ssml": ["Enter comments here:"],
+                    "option": [
+                        "1. Submit.",
+                        "2. Cancel."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow31_Login": {
+        "Flow31_Login_1": {
+            "prompt": ["My services are currently limited to the questions presented previously. However, I am learning all the time. Please feel free to tell me about additional questions you may have. {{servicer}} will periodically update the questions I can answer, as we learn how to best serve you, our valued customer."],
+                "prompt_ssml": ["My services are currently limited to the questions presented previously. However, I am learning all the time. Please feel free to tell me about additional questions you may have. {{servicer}} will periodically update the questions I can answer, as we learn how to best serve you, our valued customer."]
+        },
+        "Flow31_Login_2": {
+            "prompt": ["All comments will be reviewed. However, if you need immediate service, it is best to reach out to one of our team members to assist you in a timely fashion."],
+                "prompt_ssml": ["All comments will be reviewed. However, if you need immediate service, it is best to reach out to one of our team members to assist you in a timely fashion."],
+                    "option": [
+                        "1. Contact {{servicer}} Campus Commerce.",
+                        "2. Send comments and end chat.",
+                        "3. Return to help topics."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "Flow31_Login_3": {
+            "prompt": ["Enter comments here:"],
+                "prompt_ssml": ["Enter comments here:"],
+                    "option": [
+                        "1. Submit.",
+                        "2. Cancel."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "Flow30": {
+        "ChatEndReview": {
+            "ChatEndReview_1":
+            {
+                "prompt": ["This brings us to the end of our session. Thank you for the opportunity to serve you today. I hope my service has been helpful."],
+                    "prompt_ssml": ["This brings us to the end of our session. Thank you for the opportunity to serve you today. I hope my service has been helpful."]
+            },
+            "ChatEndReview_2": {
+                "prompt": ["We'd love to hear some feedback from you and further, you can download your chat transcript."],
+                    "prompt_ssml": ["We'd love to hear some feedback from you and further, you can download your chat transcript."]
+            },
+            "ChatEndReview_3": {
+                "prompt": ["How did I do?"],
+                    "prompt_ssml": ["How did I do?"],
+                        "option": [
+                            "1. Helpful.",
+                            "2. Not helpful."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        },
+        "ChatComment": {
+            "ChatComment_1": {
+                "prompt": ["Your feedback is important to us. All comments are helpful and greatly appreciated."],
+                    "prompt_ssml": ["Your feedback is important to us. All comments are helpful and greatly appreciated."]
+            },
+            "ChatComment_2": {
+                "prompt": ["Enter comments here: "],
+                    "prompt_ssml": ["Enter comments here: "],
+                        "option": [
+                            "1. Submit.",
+                            "2. Cancel."
+                        ],
+                            "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                                "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+            }
+        }
+    },
+    "Flow32": {
+        "Flow32_1": {
+            "prompt": ["Steps to update your balance:"],
+                "prompt_ssml": ["Steps to update your balance:"]
+        },
+        "Flow32_2": {
+            "prompt": ["Step 1: Log in if you haven't already, and navigate to the Payment Plan & Billing page shown below. Click on the Actions button located in the Payment Plan you wish to adjust."],
+                "prompt_ssml": ["Step 1: Log in if you haven't already, and navigate to the Payment Plan and Billing page shown below. Click on the Actions button located in the Payment Plan you wish to adjust."]
+        },
+        "Flow32_3": {
+            "prompt": ["Step 2: Click on the Adjust Balance option to proceed."],
+                "prompt_ssml": ["Step 2: Click on the Adjust Balance option to proceed."]
+        },
+        "Flow32_4": {
+            "prompt": ["Note: Not all schools allow balance adjustments to be made by the Payer. If you do not see an option to Adjust Balance, you should contact a {{servicer}} Campus Commerce customer service representative for further assistance."],
+                "prompt_ssml": ["Note: Not all schools allow balance adjustments to be made by the Payer. If you do not see an option to Adjust Balance, you should contact a {{servicer}} Campus Commerce customer service representative for further assistance."],
+                    "option": [
+                        "1. Contact {{servicer}} Campus Commerce.",
+                        "2. Continue."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        },
+        "Flow32_5": {
+            "prompt": ["Step 3: When you see the page shown below, click on the button to indicate if you want to increase or decrease your balance, and make entries to indicate the change."],
+                "prompt_ssml": ["Step 3: When you see the page shown below, click on the button to indicate if you want to increase or decrease your balance, and make entries to indicate the change."]
+        },
+        "Flow32_6": {
+            "prompt": ["Step 4: Some schools choose to only apply the increase or decrease across all remaining payments."],
+                "prompt_ssml": ["Step 4: Some schools choose to only apply the increase or decrease across all remaining payments."]
+        },
+        "Flow32_7": {
+            "prompt": ["-Your new schedule will appear, showing the former monthly payment due, and the new monthly payment due."],
+                "prompt_ssml": ["-Your new schedule will appear, showing the former monthly payment due, and the new monthly payment due."]
+        },
+        "Flow32_ExitBlock": {
+            "prompt": ["What else can I help you with?"],
+                "prompt_ssml": ["What else can I help you with?"],
+                    "option": [
+                        "1. More payment plan topics.",
+                        "2. Back to help topics.",
+                        "3. I'm all set. End chat."
+                    ],
+                        "reprompt": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"],
+                            "reprompt_ssml": ["Sorry. I didn't quite catch that. Select one of the options below to continue:"]
+        }
+    },
+    "LargeMessageError": {
+        "prompt": ["Sorry, I'm not able to understand anything you enter other than the answers to my specific questions."],
+            "prompt_ssml": ["Sorry, I'm not able to understand anything you enter other than the answers to my specific questions."]
+    },
+
+    "CommonErrorMessage": {
+        "prompt": ["We are facing some error. Please try again later."],
+            "prompt_ssml": ["We are facing some error. Please try again later."]
+    },
+
+    "ContinueButton": {
+        "reprompt": ["To move forward, you must click the \"Continue Chat\" button or type \"Continue Chat\"."],
+            "reprompt_ssml": ["To move forward, you must click the \"Continue Chat\" button or type \"Continue Chat\"."]
+    }
+}
